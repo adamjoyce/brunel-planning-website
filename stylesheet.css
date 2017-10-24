@@ -9,13 +9,13 @@ body {
 h1 {
 	font-size: 48px;
 	font-weight: 300;
-    margin: 0 0 20px 0;
+    	margin: 0 0 20px 0;
 }
 
 h2 {
 	font-size: 24px;
 	font-weight: 300;
-    margin: 0;
+    	margin: 0;
 }
 
 p {
@@ -29,8 +29,8 @@ p {
 	height: 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
+    	background-size: cover;
+    	background-position: center center;
 }
 
 .content {
@@ -94,10 +94,18 @@ p {
 	width: 100%;
 	color: white;
 	text-align: right;
-	text-shadow: -1px -1px 0 MidnightBlue,  
-				 1px -1px 0 MidnightBlue,
-				 -1px 1px 0 MidnightBlue,
-				 1px 1px 0 MidnightBlue;
+	text-shadow: 0 0 5px #09113a,
+				 0 0 5px #09113a,
+				 0 0 5px #09113a,
+				 0 0 5px #09113a,
+				 0 0 10px #09113a,
+				 0 0 10px #09113a,
+				 0 0 10px #09113a,
+				 0 0 10px #09113a,
+				 0 0 20px #09113a,
+				 0 0 20px #09113a,
+				 0 0 20px #09113a,
+				 0 0 20px #09113a;
 }
 
 .textContentAbout {
@@ -119,12 +127,12 @@ p {
 #roryJoycePicture {
 	width: 100%;
 	margin: 20px 20px 20px 0;
-    border: 2px solid MidnightBlue;
+    	border: 2px solid MidnightBlue;
 }
 
 [class*="col-"] {
-    float: left;
-    padding: 0;
+    	float: left;
+    	padding: 0;
 	margin: 0;
 }
 
