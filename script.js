@@ -1,11 +1,11 @@
 window.onload = function loadStuff() {
   var win, doc, img, header, enhancedClass;
-  
+
   // Quit early if older browser (e.g. IE 8).
   if (!('addEventListener' in window)) {
     return;
   }
-  
+
   win = window;
   doc = win.document;
   img = new Image();
@@ -15,7 +15,7 @@ window.onload = function loadStuff() {
   // Rather convoluted, but parses out the first mention of a background
   // image url for the enhanced header, even if the style is not applied.
   var bigSrc = (function () {
-    // Find all of the CssRule objects inside the inline stylesheet 
+    // Find all of the CssRule objects inside the inline stylesheet
     var styles = doc.querySelector('style').sheet.cssRules;
     // Fetch the background-image declaration...
     var bgDecl = (function () {
@@ -30,21 +30,21 @@ window.onload = function loadStuff() {
           // value of that rule
           bgStyle = styles[i].style.backgroundImage;
           // ...and break the loop.
-          break; 
+          break;
         }
       }
       // ...and return that text.
       return bgStyle;
     }());
     // Finally, return a match for the URL inside the background-image
-    // by using a fancy regex I Googled up, as long as the bgDecl 
-    // variable is assigned at all.         
+    // by using a fancy regex I Googled up, as long as the bgDecl
+    // variable is assigned at all.
     return bgDecl && bgDecl.match(/(?:\(['|"]?)(.*?)(?:['|"]?\))/)[1];
   }());
 
   // Assign an onLoad handler to the dummy image *before* assigning the src
   img.onload = function () {
-    header.className += ' ' +enhancedClass;
+    header.className += ' ' + enhancedClass;
   };
   // Finally, trigger the whole preloading chain by giving the dummy
   // image its source.
@@ -59,5 +59,14 @@ function toggleResponsiveNavBar() {
 		x.className += " responsive";
 	} else {
 		x.className = "navList";
+	}
+}
+
+function toggleResponsiveAboutNavBar() {
+	var x = document.getElementById("aboutNavList");
+	if (x.className === "navList navListAbout") {
+		x.className = "navList responsive navListAbout";
+	} else {
+		x.className = "navList navListAbout";
 	}
 }

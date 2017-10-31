@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="1348" height="681"
-     viewBox="0 0 1348 681">
+     width="1200" height="675"
+     viewBox="0 0 1200 675">
 	<filter id="blur" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 		<feGaussianBlur stdDeviation="20 20" edgeMode="duplicate" />
 		<feComponentTransfer>

@@ -1,9 +1,9 @@
 body {
 	width: 100%;
+	height: 100%;
 	margin: 0;
-	padding: 0;
-	font-family: "Georgia", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
-	background-color: #00146E;
+	font-family: "Georgia", "Segoe UI", Segoe, Helvetica, Arial,
+							 "Lucida Grande", sans-serif;
 }
 
 h1 {
@@ -84,8 +84,30 @@ p {
 	font-size: 14.5px;
 }
 
+.navListAbout li {
+	width: 33.3%;
+}
+
+.aboutNavRow {
+	position: relative;
+}
+
+.aboutNavPos {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.padding {
+	width: 100%;
+}
+
+.logoDiv {
+	float: right;
+}
+
 .logo {
-	width: 400px;
+	width: 80%;
 	float: right;
 	padding-top: 50px;
 }
@@ -109,11 +131,10 @@ p {
 }
 
 .textContentAbout {
-	width: 95%;
-	margin: 0px 0 20px 20px;
+	margin: 0 0 20px 0;
 	color: white;
 	text-align: right;
-	text-shadow: -1px -1px 0 MidnightBlue,  
+	text-shadow: -1px -1px 0 MidnightBlue,
 				 1px -1px 0 MidnightBlue,
 				 -1px 1px 0 MidnightBlue,
 				 1px 1px 0 MidnightBlue;
@@ -124,10 +145,13 @@ p {
 	text-justify: auto;
 }
 
-#roryJoycePicture {
+#aboutPictureDiv {
+	margin: 20px 20px 10px 0;
+}
+
+#aboutPicture {
 	width: 100%;
-	margin: 20px 20px 20px 0;
-    	border: 2px solid MidnightBlue;
+  border: 2px solid MidnightBlue;
 }
 
 [class*="col-"] {
@@ -151,40 +175,56 @@ p {
 
 /* For small screens. */
 @media only screen and (max-width: 800px) {
+	.navListAbout li {
+		width: 12.5%;
+	}
+
 	.navList li:not(:first-child) {display: none;}
-	
+
 	.navList li:first-child {
 		width: 87.5%;
 	}
-	
+
 	.navList li:first-child a {
 		text-align: left;
 		padding-left: 5px;
 	}
-  
+
 	.navList li.icon {
 		float: right;
 		display: block;
 		font-size: 14.5px;
 	}
-	
-	.logo {
-		width: 100%;
-	}
-	
+
 	.textContent {
 		text-align: center;
 	}
-	
+
 	.textContentAbout {
 		width: 100%;
 		margin: 0 0 20px 0;
 	}
-	
+
 	.textContentAbout p {
 		text-align: left;
 	}
-	
+
+	.logoDiv {
+		float: left;
+	}
+
+	.logo {
+		width: 100%;
+	}
+
+	.aboutNavRow {
+		position: static;
+	}
+
+	.aboutNavPos {
+		position: static;
+	}
+
 	.col-6 {width: 100%;}
 }
 
@@ -193,24 +233,24 @@ p {
 	.navList.responsive {
 		position: relative;
 	}
-	
+
 	.navList.responsive li.icon {
 		position: absolute;
 		right: 0;
 		top: 0;
 	}
-	
+
 	.navList.responsive li {
 		float: none;
 		display: inline;
 	}
-	  
+
 	.navList.responsive li a {
 		display: block;
 		padding-left: 5px;
 		text-align: left;
 	}
-	  
+
 	.navList.responsive li.icon a {
 		padding-left: 0;
 		text-align: center;
