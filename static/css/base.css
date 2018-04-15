@@ -1,7 +1,7 @@
 body {
-  background: #02136d;
   color: #fff;
   font-family: Georgia, Utopia, Charter, serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -9,13 +9,20 @@ a {
   text-decoration: none;
 }
 
+footer {
+  background: #02136d;
+  box-shadow: 0 50vh 0 50vh #02136d;
+}
+
 .page-wrapper {
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-.heading-wrapper {
-  margin: 2rem 0;
+.underline {
+  display: inline-block;
+  border-bottom: 2px solid #02136d;
+  margin-bottom: 1rem;
 }
 
 
@@ -28,8 +35,11 @@ a {
 }
 
 #nav-bar li a {
+  border: 3px solid #02136d;
+  border-left: 0;
+  border-right: 0;
   display: inline-block;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 }
 
 #nav-bar::after {
@@ -57,7 +67,8 @@ a {
 }
 
 #nav-logo img {
-  height: 2.8rem;
+  /* border: 3px solid #02136d; */
+  height: 2.73333125rem;
   vertical-align: top;
   width: auto;
 }
@@ -102,20 +113,31 @@ a {
 
 #logo {
   display: none;
-  /* float: right;
-  height: 5rem;
-  margin: 1rem auto;
-  vertical-align: top; */
 }
 
 #text {
-  background: #02136d;
+  background: #fff;
+  /* border: 5px solid #02136d; */
+  color: #02136d;
+  line-height: 1.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
 #text h1 {
   /* font-family: Verdana, sans-serif; */
   font-size: 2rem;
-  font-weight: bold;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+#text p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+#text p:first-of-type {
+  margin-top: 0;
 }
 /* End of Main Content */
 
@@ -131,8 +153,20 @@ a {
     overflow: hidden;
   }
 
+  footer {
+    display: none;
+  }
+
+  .underline {
+    border-bottom-color: #02136d;
+  }
+
   #nav-regular {
     display: block;
+  }
+
+  #nav-regular a:hover {
+    border-bottom: 3px solid #fff;
   }
 
   #image-banner {
@@ -143,15 +177,21 @@ a {
     display: block;
     float: right;
     height: 6rem;
-    margin: 4rem 0;
+    margin: 3rem 0;
     width: auto;
   }
 
   #text {
-    background: #02136d;
+    background: linear-gradient(to bottom right, #fff, #aaa);
+    border: 5px solid #02136d;
+    color: #02136d;
     float: right;
-    height: 20rem;
-    width: 40rem;
+    margin: 0;
+    width: 35rem;
+  }
+
+  #text h1 {
+    text-align: left;
   }
 }
 
