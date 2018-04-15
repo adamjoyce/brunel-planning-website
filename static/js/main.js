@@ -1,3 +1,11 @@
+// Js is enabled so displayed slide elements.
+var slideInElements = document.getElementsByClassName('content-wrapper');
+if (slideInElements) {
+  for (var i = 0; i < slideInElements.length; i++) {
+    slideInElements[i].classList.remove('js-hidden');
+  }
+}
+
 window.onload = function() {
   // Bind navigation hamburger events.
   var hamburgers = document.getElementsByClassName('hamburger');
@@ -18,8 +26,7 @@ window.onload = function() {
     });
   }
 
-  // Side Slide Elements.
-  var slideInElements = document.getElementsByClassName('content-wrapper');
+  // Init Slide Elements.
   if (slideInElements) {
     for (var i = 0; i < slideInElements.length; i++) {
       if (slideInElements[i].classList.contains('loading-left'))
