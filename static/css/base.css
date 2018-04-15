@@ -14,6 +14,16 @@ footer {
   box-shadow: 0 50vh 0 50vh #02136d;
 }
 
+footer .nav-mobile {
+  font-size: 0.9rem;
+  max-height: none;
+}
+
+footer .nav-mobile a {
+  display: block;
+  padding: 0.5rem 0;
+}
+
 .page-wrapper {
   margin: 0 auto;
   padding: 0 1rem;
@@ -25,6 +35,11 @@ footer {
   margin-bottom: 1rem;
 }
 
+.alt-text img {
+  font-family: Georgia, Utopia, Charter, serif;
+  text-transform: none;
+}
+
 
 /* Navigation */
 .hamburger {
@@ -32,6 +47,26 @@ footer {
   height: 100%;
   font-size: 1.8rem;
   margin: 0.46rem 0;
+}
+
+.nav-mobile {
+  max-height: 0;
+  overflow-y: hidden;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.nav-mobile li:first-of-type {
+  margin-top: 0.8rem;
+}
+
+.nav-mobile li:last-of-type {
+  margin-bottom: 0.8rem;
+}
+
+.nav-mobile.opened {
+  max-height: 24rem;
 }
 
 #nav-bar {
@@ -60,7 +95,9 @@ footer {
 }
 
 #nav-logo img {
+  font-size: 2rem;
   height: 2.73333125rem;
+  line-height: 2.73333125rem;
   vertical-align: top;
   width: auto;
 }
@@ -73,7 +110,9 @@ footer {
 /* BrunelPlanning Nav Logo */
 #nav-logo img:last-of-type {
   display: inline-block;
+  font-size: 1.6rem;
   height: 2.6rem;
+  line-height: 2.6rem;
   margin-top: 0.13333125rem;
 }
 
@@ -91,31 +130,19 @@ footer {
   margin-right: 0;
 }
 
-#nav-mobile {
-  max-height: 0;
-  overflow-y: hidden;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-  width: 100%;
-}
-
-#nav-mobile li:first-of-type {
-  margin-top: 0.8rem;
-}
-
-#nav-mobile li:last-of-type {
-  margin-bottom: 0.8rem;
-}
-
-#nav-mobile.opened {
-  max-height: 24rem;
+#nav-regular #active {
+  border-bottom: 3px solid #fff;
 }
 /* End of Navigation */
 
 
 /* Mobile Banner Image */
 #image-banner img {
+  color: #02136d;
+  display: block;
   max-width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
   vertical-align: top;
 }
 /* End of Mobile Banner Image */
@@ -177,6 +204,10 @@ footer {
 #text p:first-of-type {
   margin-top: 0;
 }
+
+#contact-details p {
+  margin-bottom: 0;
+}
 /* End of Main Content */
 
 
@@ -185,6 +216,7 @@ footer {
   body {
     background: url(../images/backgrounds/BristolBridge12Progressive.jpg);
     background-attachment: fixed;
+    background-color: #aaa;
   	background-position: center;
     background-repeat: no-repeat;
   	background-size: cover;
@@ -203,16 +235,16 @@ footer {
     display: none;
   }
 
+  .nav-mobile {
+    display: none;
+  }
+
   #nav-regular {
     display: block;
   }
 
   #nav-regular a:hover {
     border-bottom: 3px solid #fff;
-  }
-
-  #nav-mobile {
-    display: none;
   }
 
   /* BP Nav Logo */
@@ -230,9 +262,12 @@ footer {
   }
 
   #logo {
+    color: #02136d;
     display: block;
     float: right;
+    font-size: 2.5rem;
     height: 6rem;
+    line-height: 6rem;
     margin: 3rem 0;
     width: auto;
   }

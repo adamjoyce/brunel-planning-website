@@ -1,7 +1,7 @@
 window.onload = function() {
   // Bind navigation hamburger events.
   var hamburgers = document.getElementsByClassName('hamburger');
-  var navMenu = document.getElementById('nav-mobile');
+  var navMenu = document.getElementsByClassName('nav-mobile')[0];
   if (hamburgers && navMenu) {
     // Toggle the drop-down menu.
     hamburgers[0].addEventListener('click', function() {
