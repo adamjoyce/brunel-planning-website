@@ -27,6 +27,13 @@ footer {
 
 
 /* Navigation */
+.hamburger {
+  float: right;
+  height: 100%;
+  font-size: 1.8rem;
+  margin: 0.46rem 0;
+}
+
 #nav-bar {
   background: #02136d;
   font-family: Verdana, sans-serif;
@@ -48,6 +55,28 @@ footer {
   display: table;
 }
 
+#nav-logo {
+  margin-right: 1rem;
+}
+
+#nav-logo img {
+  height: 2.73333125rem;
+  vertical-align: top;
+  width: auto;
+}
+
+/* BP Nav Logo */
+#nav-logo img:first-of-type {
+  display: none;
+}
+
+/* BrunelPlanning Nav Logo */
+#nav-logo img:last-of-type {
+  display: inline-block;
+  height: 2.6rem;
+  margin-top: 0.13333125rem;
+}
+
 #nav-regular {
   display: none;
   float: right;
@@ -62,15 +91,24 @@ footer {
   margin-right: 0;
 }
 
-#nav-logo {
-  margin-right: 1rem;
+#nav-mobile {
+  max-height: 0;
+  overflow-y: hidden;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
-#nav-logo img {
-  /* border: 3px solid #02136d; */
-  height: 2.73333125rem;
-  vertical-align: top;
-  width: auto;
+#nav-mobile li:first-of-type {
+  margin-top: 0.8rem;
+}
+
+#nav-mobile li:last-of-type {
+  margin-bottom: 0.8rem;
+}
+
+#nav-mobile.opened {
+  max-height: 24rem;
 }
 /* End of Navigation */
 
@@ -125,8 +163,8 @@ footer {
 }
 
 #text h1 {
-  /* font-family: Verdana, sans-serif; */
   font-size: 2rem;
+  line-height: 2rem;
   padding-bottom: 0.5rem;
   text-align: center;
 }
@@ -161,12 +199,30 @@ footer {
     border-bottom-color: #02136d;
   }
 
+  .hamburger {
+    display: none;
+  }
+
   #nav-regular {
     display: block;
   }
 
   #nav-regular a:hover {
     border-bottom: 3px solid #fff;
+  }
+
+  #nav-mobile {
+    display: none;
+  }
+
+  /* BP Nav Logo */
+  #nav-logo img:first-of-type {
+    display: inline-block;
+  }
+
+  /* BrunelPlanning Nav Logo */
+  #nav-logo img:last-of-type {
+    display: none;
   }
 
   #image-banner {
