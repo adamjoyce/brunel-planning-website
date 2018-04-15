@@ -1,12 +1,7 @@
 body {
-  background: url(../images/backgrounds/BristolBridge12Progressive.jpg);
-  background-attachment: fixed;
-	background-position: center;
-  background-repeat: no-repeat;
-	background-size: cover;
+  background: #02136d;
   color: #fff;
   font-family: Georgia, Utopia, Charter, serif;
-  overflow: hidden;
 }
 
 a {
@@ -14,9 +9,13 @@ a {
   text-decoration: none;
 }
 
-.content-wrapper {
+.page-wrapper {
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+.heading-wrapper {
+  margin: 2rem 0;
 }
 
 
@@ -40,6 +39,7 @@ a {
 }
 
 #nav-regular {
+  display: none;
   float: right;
 }
 
@@ -57,20 +57,27 @@ a {
 }
 
 #nav-logo img {
-  height: 2.6rem;
-  padding-top: 0.1rem;
+  height: 2.8rem;
   vertical-align: top;
   width: auto;
 }
 /* End of Navigation */
 
 
-/* Main Sliding Content */
+/* Mobile Banner Image */
+#image-banner img {
+  max-width: 100%;
+  vertical-align: top;
+}
+/* End of Mobile Banner Image */
+
+
+/* Main Content */
 .content-wrapper {
   clear: both;
   content: "";
   display: table;
-  /* transition-duration: 600ms; */
+  width: 100%;
 }
 
 .content-wrapper.duration-left {
@@ -78,7 +85,7 @@ a {
 }
 
 .content-wrapper.duration-right {
-  transition-duration: 1200ms;
+  transition-duration: 900ms;
 }
 
 .content-wrapper.loading-left {
@@ -93,47 +100,63 @@ a {
           transform: rotate(100%);
 }
 
-#logo-wrapper {
-  /* background: blue; */
-  display: block;
-  height: auto;
-  margin: auto;
-  width: 100%;
+#logo {
+  display: none;
+  /* float: right;
+  height: 5rem;
+  margin: 1rem auto;
+  vertical-align: top; */
 }
 
-#logo-wrapper img {
-  float: right;
-  height: 6rem;
-  margin: 4rem 0;
-  vertical-align: top;
-}
-
-#logo-wrapper::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-#text-wrapper {
-  /* background: green; */
-  display: block;
-  height: 20rem;
-  margin: auto;
-  width: 100%;
-}
-
-#text-wrapper div {
+#text {
   background: #02136d;
-  float: right;
-  height: 100%;
-  width: 40rem;
 }
-/* End of Main Sliding Content */
+
+#text h1 {
+  /* font-family: Verdana, sans-serif; */
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* End of Main Content */
 
 
 /* Media Queries */
+@media (min-width: 48.8rem) {
+  body {
+    background: url(../images/backgrounds/BristolBridge12Progressive.jpg);
+    background-attachment: fixed;
+  	background-position: center;
+    background-repeat: no-repeat;
+  	background-size: cover;
+    overflow: hidden;
+  }
+
+  #nav-regular {
+    display: block;
+  }
+
+  #image-banner {
+    display: none;
+  }
+
+  #logo {
+    display: block;
+    float: right;
+    height: 6rem;
+    margin: 4rem 0;
+    width: auto;
+  }
+
+  #text {
+    background: #02136d;
+    float: right;
+    height: 20rem;
+    width: 40rem;
+  }
+}
+
 @media (min-width: 70rem) {
-  .content-wrapper {
+  .page-wrapper {
     padding: 0;
     width: 70rem;
   }
