@@ -137,18 +137,49 @@ footer .nav-mobile a {
 
 
 /* Banner Images */
-#image-banner img {
-  color: #02136d;
-  display: block;
-  max-width: 100%;
-  min-width: 12.5rem;
-  font-size: 1.5rem;
-  text-align: center;
-  vertical-align: top;
+.image-banner-home {
+  background-image: url(../images/banners/HomeProgressive.jpg);
+  background-position: center 50%;
 }
 
-#image-banner-about {
-  background: none;
+.image-banner-commercial {
+  background-image: url(../images/banners/CommercialProgressive.jpg);
+  background-position: center 91%;
+}
+
+.image-banner-residential {
+  background-image: url(../images/banners/ResidentialProgressive.jpg);
+  background-position: center 55%;
+}
+
+.image-banner-transport {
+  background-image: url(../images/banners/TransportProgressive.jpg);
+  background-position: center 63%;
+}
+
+.image-banner-education {
+  background-image: url(../images/banners/EducationProgressive.jpg);
+  background-position: center 85%;
+}
+
+.image-banner-heritage {
+  background-image: url(../images/banners/HeritageProgressive.jpg);
+  background-position: center 35%;
+}
+
+.image-banner-energy {
+  background-image: url(../images/banners/EnergyProgressive.jpg);
+  background-position: center 75%;
+}
+
+.image-banner-about {
+  background-image: url(../images/banners/AboutProgressive.jpg);
+  background-position: center 91%;
+}
+
+#image-banner {
+  background-size: cover;
+  min-height: 12.5rem;
 }
 /* End of Banner Images */
 
@@ -265,14 +296,6 @@ footer .nav-mobile a {
     display: none;
   }
 
-  .bg-image {
-    background-attachment: fixed;
-    background-color: #aaa;
-  	background-position: center;
-    background-repeat: no-repeat;
-  	background-size: cover;
-  }
-
   .underline {
     border-bottom-color: #02136d;
   }
@@ -284,6 +307,44 @@ footer .nav-mobile a {
   .nav-mobile {
     display: none;
   }
+
+  /* Background Images */
+  .bg-image-home {
+    background-image: url(../images/backgrounds/HomeProgressive.jpg);
+  }
+
+  .bg-image-commercial {
+    background-image: url(../images/backgrounds/CommercialProgressive.jpg);
+  }
+
+  .bg-image-residential {
+    background-image: url(../images/backgrounds/ResidentialProgressive.jpg);
+  }
+
+  .bg-image-transport {
+    background-image: url(../images/backgrounds/TransportProgressive.jpg);
+  }
+
+  .bg-image-education {
+    background-image: url(../images/backgrounds/EducationProgressive.jpg);
+  }
+
+  .bg-image-heritage {
+    background-image: url(../images/backgrounds/HeritageProgressive.jpg);
+  }
+
+  .bg-image-energy {
+    background-image: url(../images/backgrounds/EnergyProgressive.jpg);
+  }
+
+  #bg-image {
+    background-attachment: fixed;
+    background-color: #aaa;
+  	background-position: center;
+    background-repeat: no-repeat;
+  	background-size: cover;
+  }
+  /* End of Background Images */
 
   #nav-regular {
     display: block;
@@ -305,13 +366,6 @@ footer .nav-mobile a {
 
   #image-banner {
     display: none;
-  }
-
-  #image-banner-about {
-    background: url(../images/banners/MusicBoxShardProgressiveFull.jpg);
-    background-position: center 91%;
-    background-size: cover;
-    min-height: 12.5rem;
   }
 
   #logo {

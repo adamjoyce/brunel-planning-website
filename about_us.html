@@ -19,13 +19,27 @@
     <link href="./static/css/base.css" rel="stylesheet">
     <style media="screen">
       body {
-        overflow-y: visible;
+        overflow-y: auto;
       }
       footer {
         display: block;
       }
       footer .nav-mobile {
         display: block;
+      }
+      #image-banner {
+        display: block;
+      }
+      /* Fixes weird FireFox bug/interaction between grid and 'display: table'
+      when toggling fullscreen. */
+      @supports (display: grid) {
+        @media (min-width: 50rem) {
+          .content-wrapper {
+            clear: none;
+            content: none;
+            display: block;
+          }
+        }
       }
     </style>
   </head>
@@ -76,13 +90,9 @@
     </div>
 
     <!-- Image Banner -->
-    <div id="image-banner-about" class="alt-text"></div>
-    <!-- Mobile Image Banner -->
-    <div id="image-banner" class=" alt-text" title="Banner Image">
-      <img
-        src="./static/images/banners/MusicBoxShardProgressive.jpg"
-        alt="Music Box Shard Picture">
-    </div>
+    <div id="image-banner"
+         class="image-banner-about"
+         title="About Us Image Banner"></div>
 
     <!-- Text Content -->
     <div class="text">
