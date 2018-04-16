@@ -237,10 +237,6 @@ footer .nav-mobile a {
   margin: 3rem 0;
 }
 
-/* .text > .content-wrapper:first-of-type .profile-wrapper {
-  margin-top: 2rem;
-} */
-
 .profile-image {
   border: 3px solid #02136d;
   height: auto;
@@ -260,7 +256,7 @@ footer .nav-mobile a {
 
 
 /* Media Queries */
-@media (min-width: 48.8rem) {
+@media (min-width: 50rem) {
   body {
     overflow: hidden;
   }
@@ -348,4 +344,16 @@ footer .nav-mobile a {
     width: 70rem;
   }
 }
+
+/* CSS Grid Support */
+@supports (display: grid) {
+  @media (min-width: 50rem) {
+    .profile-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-gap: 2.5rem;
+    }
+  }
+}
+/* End CSS Grid Support */
 /* End of Media Queries */
