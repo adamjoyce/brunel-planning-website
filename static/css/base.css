@@ -136,16 +136,21 @@ footer .nav-mobile a {
 /* End of Navigation */
 
 
-/* Mobile Banner Image */
+/* Banner Images */
 #image-banner img {
   color: #02136d;
   display: block;
   max-width: 100%;
+  min-width: 12.5rem;
   font-size: 1.5rem;
   text-align: center;
   vertical-align: top;
 }
-/* End of Mobile Banner Image */
+
+#image-banner-about {
+  background: none;
+}
+/* End of Banner Images */
 
 
 /* Main Content */
@@ -180,32 +185,40 @@ footer .nav-mobile a {
   display: none;
 }
 
-#logo {
-  display: none;
-}
-
-#text {
-  background: #fff;
-  /* border: 5px solid #02136d; */
+.text {
   color: #02136d;
   line-height: 1.5rem;
-  padding: 1rem;
-  margin: 1rem 0;
 }
 
-#text h1 {
+.text h1,
+.text h2 {
   font-size: 2rem;
   line-height: 2rem;
   padding-bottom: 0.5rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
-#text p {
+.text h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.text p {
   font-size: 1rem;
   margin: 1rem 0;
 }
 
-#text p:first-of-type {
+#logo {
+  display: none;
+}
+
+#text-box {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+#text-box p:first-of-type {
   margin-top: 0;
 }
 
@@ -215,20 +228,53 @@ footer .nav-mobile a {
 /* End of Main Content */
 
 
+/* About Us Page */
+.bg-dark {
+  background: #f9f9f9;
+}
+
+.profile-wrapper {
+  margin: 3rem 0;
+}
+
+/* .text > .content-wrapper:first-of-type .profile-wrapper {
+  margin-top: 2rem;
+} */
+
+.profile-image {
+  border: 3px solid #02136d;
+  height: auto;
+  margin-bottom: 1.5rem;
+  max-width: 30rem;
+  width: 100%;
+}
+
+#heading-about {
+  margin-top: 2rem;
+}
+
+#heading-about h1 {
+  margin: 0;
+}
+/* End of About Us Page */
+
+
 /* Media Queries */
 @media (min-width: 48.8rem) {
   body {
-    background: url(../images/backgrounds/BristolBridge12Progressive.jpg);
-    background-attachment: fixed;
-    background-color: #aaa;
-  	background-position: center;
-    background-repeat: no-repeat;
-  	background-size: cover;
     overflow: hidden;
   }
 
   footer {
     display: none;
+  }
+
+  .bg-image {
+    background-attachment: fixed;
+    background-color: #aaa;
+  	background-position: center;
+    background-repeat: no-repeat;
+  	background-size: cover;
   }
 
   .underline {
@@ -265,6 +311,13 @@ footer .nav-mobile a {
     display: none;
   }
 
+  #image-banner-about {
+    background: url(../images/banners/MusicBoxShardProgressiveFull.jpg);
+    background-position: center 91%;
+    background-size: cover;
+    min-height: 12.5rem;
+  }
+
   #logo {
     color: #02136d;
     display: block;
@@ -276,16 +329,15 @@ footer .nav-mobile a {
     width: auto;
   }
 
-  #text {
+  #text-box {
     background: linear-gradient(to bottom right, #fff, #aaa);
     border: 5px solid #02136d;
-    color: #02136d;
     float: right;
     margin: 0;
     width: 35rem;
   }
 
-  #text h1 {
+  #text-box h1 {
     text-align: left;
   }
 }

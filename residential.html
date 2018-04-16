@@ -19,8 +19,17 @@
     <!-- Styles -->
     <link href="./static/css/reset.css" rel="stylesheet">
     <link href="./static/css/base.css" rel="stylesheet">
+    <!-- For Background Image -->
+    <style media="screen">
+      @media (min-width: 48.8rem) {
+        .bg-image {
+          background-image:
+            url(./static/images/backgrounds/BristolBridge12Progressive.jpg);
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-image">
     <!-- Navigation -->
     <div id="nav-bar">
       <div class="page-wrapper">
@@ -96,25 +105,8 @@
 
     <div class="content-wrapper duration-right loading-right js-hidden">
       <div class="page-wrapper">
-        <div id="text">
-          <h1 class="underline">Residential</h1>
-          <p>Planning advice on large scale residential development projects</p>
-          <p>From Strategic Planning Advice and Land Use Appriasals to
-          Pre-application negotiations, Public Consultation, Application
-          Submission and Section 106 Heads of Terms and Community
-          Infrastructure Levy</p>
-          <div id="contact-details">
-            <p>Email: roryjoyce@brunelplanning.co.uk<br>
-            07771 898315</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- For Javascript Disabled Browsers -->
-    <noscript>
-      <div class="content-wrapper">
-        <div class="page-wrapper">
-          <div id="text">
+        <div class="text">
+          <div id="text-box">
             <h1 class="underline">Residential</h1>
             <p>Planning advice on large scale residential development projects</p>
             <p>From Strategic Planning Advice and Land Use Appriasals to
@@ -124,6 +116,27 @@
             <div id="contact-details">
               <p>Email: roryjoyce@brunelplanning.co.uk<br>
               07771 898315</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- For Javascript Disabled Browsers -->
+    <noscript>
+      <div class="content-wrapper">
+        <div class="page-wrapper">
+          <div class="text">
+            <div id="text-box">
+              <h1 class="underline">Residential</h1>
+              <p>Planning advice on large scale residential development projects</p>
+              <p>From Strategic Planning Advice and Land Use Appriasals to
+              Pre-application negotiations, Public Consultation, Application
+              Submission and Section 106 Heads of Terms and Community
+              Infrastructure Levy</p>
+              <div id="contact-details">
+                <p>Email: roryjoyce@brunelplanning.co.uk<br>
+                07771 898315</p>
+              </div>
             </div>
           </div>
         </div>
