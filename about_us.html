@@ -39,6 +39,10 @@
             content: none;
             display: block;
           }
+          /* Repeated to override 'display: block' above when js is disabled. */
+          .js-hidden {
+            display: none;
+          }
         }
       }
     </style>
@@ -70,7 +74,7 @@
             <li><a href="./education.html">Education</a></li>
             <li><a href="./culture_and_heritage.html">Heritage</a></li>
             <li><a href="./energy.html">Energy</a></li>
-            <li><a href="./about_us.html">About Us</a></li>
+            <li><a id="active" href="./about_us.html">About Us</a></li>
           </ul>
         </div>
 
@@ -125,7 +129,7 @@
               member of the Oxford Joint Planning Law Conference Committee
               since 1996.  He was a member of the Expert Panel for the
               Airports Commission 2014-2015.</p>
-              <div id="contact-details">
+              <div class="contact-details">
                 <p>Email: roryjoyce@brunelplanning.co.uk<br>
                 07771 898315</p>
               </div>
@@ -157,7 +161,7 @@
                 member of the Oxford Joint Planning Law Conference Committee
                 since 1996.  He was a member of the Expert Panel for the
                 Airports Commission 2014-2015.</p>
-                <div id="contact-details">
+                <div class="contact-details">
                   <p>Email: roryjoyce@brunelplanning.co.uk<br>
                   07771 898315</p>
                 </div>
@@ -191,7 +195,7 @@
                 development potential of sites, submitting and negotiating
                 planning applications and preparing evidence for planning
                 appeals.</p>
-                <div id="contact-details">
+                <div class="contact-details">
                   <p>Email: kateespezel@brunelplanning.co.uk<br>
                   07779 149287</p>
                 </div>
@@ -223,7 +227,7 @@
                   development potential of sites, submitting and negotiating
                   planning applications and preparing evidence for planning
                   appeals.</p>
-                  <div id="contact-details">
+                  <div class="contact-details">
                     <p>Email: kateespezel@brunelplanning.co.uk<br>
                     07779 149287</p>
                   </div>
@@ -261,7 +265,7 @@
               Pension funds across their property portfolios.  Julia has also
               advised on airport related development including the UK Search
               and Rescue Service.  Julia also has expert witness experience.</p>
-              <div id="contact-details">
+              <div class="contact-details">
                 <p>Email: juliachowings@brunelplanning.co.uk<br>
                 07881 952956</p>
               </div>
@@ -298,7 +302,7 @@
                 advised on airport related development including the UK Search
                 and Rescue Service.  Julia also has expert witness
                 experience.</p>
-                <div id="contact-details">
+                <div class="contact-details">
                   <p>Email: juliachowings@brunelplanning.co.uk<br>
                   07881 952956</p>
                 </div>

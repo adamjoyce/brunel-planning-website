@@ -15,12 +15,12 @@ footer {
 }
 
 footer .nav-mobile {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   max-height: none;
 }
 
 footer .nav-mobile a {
-  display: block;
+  display: inline-block;
   padding: 0.5rem 0;
 }
 
@@ -202,14 +202,14 @@ footer .nav-mobile a {
 
 .content-wrapper.loading-left {
   -webkit-transform: translate(-100%);
-      -ms-transform: rotate(-100%);
-          transform: rotate(-100%);
+      -ms-transform: translate(-100%);
+          transform: translate(-100%);
 }
 
 .content-wrapper.loading-right {
   -webkit-transform: translate(100%);
-      -ms-transform: rotate(100%);
-          transform: rotate(100%);
+      -ms-transform: translate(100%);
+          transform: translate(100%);
 }
 
 .js-hidden {
@@ -239,21 +239,21 @@ footer .nav-mobile a {
   margin: 1rem 0;
 }
 
-#logo {
+.logo {
   display: none;
 }
 
-#text-box {
+.text-box {
   background: #fff;
   padding: 1rem;
   margin: 1rem 0;
 }
 
-#text-box p:first-of-type {
+.text-box p:first-of-type {
   margin-top: 0;
 }
 
-#contact-details p {
+.contact-details p {
   margin-bottom: 0;
 }
 /* End of Main Content */
@@ -265,7 +265,7 @@ footer .nav-mobile a {
 }
 
 .profile-wrapper {
-  margin: 3rem 0;
+  padding: 3rem 0;
 }
 
 .profile-image {
@@ -336,10 +336,34 @@ footer .nav-mobile a {
   .bg-image-energy {
     background-image: url(../images/backgrounds/EnergyProgressive.jpg);
   }
+  /* End of Background Images */
+
+  .logo {
+    color: #02136d;
+    display: block;
+    float: right;
+    font-size: 2.5rem;
+    height: 6rem;
+    line-height: 6rem;
+    margin: 3rem 0;
+    width: auto;
+  }
+
+  .text-box {
+    background: linear-gradient(to bottom right, #fff, #aaa);
+    border: 5px solid #02136d;
+    float: right;
+    margin: 0;
+    width: 35rem;
+  }
+
+  .text-box h1 {
+    text-align: left;
+  }
 
   #bg-image {
     background-attachment: fixed;
-    background-color: #aaa;
+    background-color: #f9f9f9;
   	background-position: center;
     background-repeat: no-repeat;
   	background-size: cover;
@@ -366,29 +390,6 @@ footer .nav-mobile a {
 
   #image-banner {
     display: none;
-  }
-
-  #logo {
-    color: #02136d;
-    display: block;
-    float: right;
-    font-size: 2.5rem;
-    height: 6rem;
-    line-height: 6rem;
-    margin: 3rem 0;
-    width: auto;
-  }
-
-  #text-box {
-    background: linear-gradient(to bottom right, #fff, #aaa);
-    border: 5px solid #02136d;
-    float: right;
-    margin: 0;
-    width: 35rem;
-  }
-
-  #text-box h1 {
-    text-align: left;
   }
 }
 
