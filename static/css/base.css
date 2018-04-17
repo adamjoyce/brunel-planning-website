@@ -135,43 +135,7 @@ footer .nav-mobile a {
 }
 /* End of Navigation */
 
-
-/* Banner Images */
-.image-banner-home {
-  background-image: url(../images/banners/HomeProgressive.jpg);
-  background-position: center 50%;
-}
-
-.image-banner-commercial {
-  background-image: url(../images/banners/CommercialProgressive.jpg);
-  background-position: center 91%;
-}
-
-.image-banner-residential {
-  background-image: url(../images/banners/ResidentialProgressive.jpg);
-  background-position: center 55%;
-}
-
-.image-banner-transport {
-  background-image: url(../images/banners/TransportProgressive.jpg);
-  background-position: center 63%;
-}
-
-.image-banner-education {
-  background-image: url(../images/banners/EducationProgressive.jpg);
-  background-position: center 85%;
-}
-
-.image-banner-heritage {
-  background-image: url(../images/banners/HeritageProgressive.jpg);
-  background-position: center 35%;
-}
-
-.image-banner-energy {
-  background-image: url(../images/banners/EnergyProgressive.jpg);
-  background-position: center 75%;
-}
-
+/* Desktop Banner Images */
 .image-banner-about {
   background-image: url(../images/banners/AboutProgressive.jpg);
   background-position: center 91%;
@@ -181,7 +145,7 @@ footer .nav-mobile a {
   background-size: cover;
   min-height: 12.5rem;
 }
-/* End of Banner Images */
+/* End of Desktop Banner Images */
 
 
 /* Main Content */
@@ -226,7 +190,6 @@ footer .nav-mobile a {
   font-size: 2rem;
   line-height: 2rem;
   padding-bottom: 0.5rem;
-  /* text-align: center; */
 }
 
 .text h3 {
@@ -276,17 +239,56 @@ footer .nav-mobile a {
   width: 100%;
 }
 
-#heading-about {
+.heading-about {
   margin-top: 2rem;
 }
 
-#heading-about h1 {
+.heading-about h1 {
   margin: 0;
 }
 /* End of About Us Page */
 
 
 /* Media Queries */
+@media (max-width: 50rem) {
+  /* Mobile Banner Images */
+  .image-banner-home {
+    background-image: url(../images/banners/HomeProgressive.jpg);
+    background-position: center 50%;
+  }
+
+  .image-banner-commercial {
+    background-image: url(../images/banners/CommercialProgressive.jpg);
+    background-position: center 91%;
+  }
+
+  .image-banner-residential {
+    background-image: url(../images/banners/ResidentialProgressive.jpg);
+    background-position: center 55%;
+  }
+
+  .image-banner-transport {
+    background-image: url(../images/banners/TransportProgressive.jpg);
+    background-position: center 63%;
+  }
+
+  .image-banner-education {
+    background-image: url(../images/banners/EducationProgressive.jpg);
+    background-position: center 85%;
+  }
+
+  .image-banner-heritage {
+    background-image: url(../images/banners/HeritageProgressive.jpg);
+    background-position: center 35%;
+  }
+
+  .image-banner-energy {
+    background-image: url(../images/banners/EnergyProgressive.jpg);
+    background-position: center 75%;
+  }
+  /* End of Mobile Banner Images */
+}
+
 @media (min-width: 50rem) {
   body {
     overflow: hidden;
@@ -309,7 +311,7 @@ footer .nav-mobile a {
   }
 
   /* Background Images */
-  .bg-image-home {
+  /* .bg-image-home {
     background-image: url(../images/backgrounds/HomeProgressive.jpg);
   }
 
@@ -335,7 +337,7 @@ footer .nav-mobile a {
 
   .bg-image-energy {
     background-image: url(../images/backgrounds/EnergyProgressive.jpg);
-  }
+  } */
   /* End of Background Images */
 
   .logo {
@@ -361,9 +363,10 @@ footer .nav-mobile a {
     text-align: left;
   }
 
-  #bg-image {
+  .bg-image {
     background-attachment: fixed;
     background-color: #f9f9f9;
+    /* background-image: none; */
   	background-position: center;
     background-repeat: no-repeat;
   	background-size: cover;

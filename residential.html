@@ -19,8 +19,24 @@
     <!-- Styles -->
     <link href="./static/css/reset.css" rel="stylesheet">
     <link href="./static/css/base.css" rel="stylesheet">
+    <style id="inline-styles" media="screen">
+      /* Inline SVG to avoid an extra request. */
+      .bg-image {
+        background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20%20%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%0A%20%20%20%20%20width%3D%221920%22%20height%3D%221165%22%0A%20%20%20%20%20viewBox%3D%220%200%201920%201165%22%3E%0A%09%3Cfilter%20id%3D%22blur%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%09%09%3CfeGaussianBlur%20stdDeviation%3D%2220%2020%22%20edgeMode%3D%22duplicate%22%20/%3E%0A%09%09%3CfeComponentTransfer%3E%0A%09%09%09%3CfeFuncA%20type%3D%22discrete%22%20tableValues%3D%221%201%22%20/%3E%0A%09%09%3C/feComponentTransfer%3E%0A%09%3C/filter%3E%0A%09%3Cimage%20filter%3D%22url%28%23blur%29%22%0A%09%09xlink%3Ahref%3D%22data%3Aimage/jpeg%3Bbase64%2C/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAYACgDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYIBwX/xAArEAABAwMBBwQCAwAAAAAAAAABAgMEAAURBgcSEyEiMUEUI1FxFZFiocH/xAAYAQADAQEAAAAAAAAAAAAAAAADBQYEAv/EACMRAAICAQMDBQAAAAAAAAAAAAECABEDBAUhEkHRMTKRwfD/2gAMAwEAAhEDEQA/AJE0XoOPLt2qbgiPxo9mSlxLa1AKUCCcZx/E88VrVl2dWhcv0q9xl4enADo3d9TySpCU57npI+xSxs2mRLTpPWbE98xZFyY4bLDiFbzntLxgjkMFSe/g1sCr9pCc2kPKKwW7Z1O9KUhpxxLwII74UMH4zVnh3R9Oekcj95inLoFzCzwZ1dObEY8pLS22UutLSFJWjmkg9iD8U/W7YNG3RmN+xSHoK8M6V1hYkWvU6ottefitzGFOpcZCOG0lYIVkJx1JyMEYHkDFlW/UmmEAhVyijBx1OJGP7ra29dS+2YBtTBuDJtu+w9mOgluMBy+KK27V21/ZvbLh+Kk6ktrVxVwgI6nhn3CoI7ZHMpP15xkUUkybgzNdH4jBND0irkNXjVsCbriPP9pTV0s01lWR2UIDSQf2TTVtE1pbJtjuUODcGpHFtUUcMqDi1PtyMADzyClj6NFFSzMwC89h9SnVQb47+YqbR7lAt2lJKbe43u7r27IJSN1SAjI5HOQUH/POJTvOsXJDKHnJUz1Kcqwp48j47nNFFFx5nCijBZcaX6TmwNSOzVsyg644+1yUhaypZP2e4+PvFFFFDOZ7NmcAChP/2Q%3D%3D%22%0A%09%09x%3D%220%22%20y%3D%220%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%20width%3D%22100%25%22/%3E%0A%3C/svg%3E);
+      }
+      .bg-image-enhanced {
+        background-image:
+          url(./static/images/backgrounds/ResidentialProgressive.jpg);
+      }
+      @media (max-width: 50rem) {
+        .bg-image,
+        .bg-image-enhanced {
+          background-image: none;
+        }
+      }
+    </style>
   </head>
-  <body id="bg-image" class="bg-image-residential">
+  <body class="bg-image">
     <!-- Navigation -->
     <div id="nav-bar">
       <div class="page-wrapper">

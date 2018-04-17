@@ -19,8 +19,24 @@
     <!-- Styles -->
     <link href="./static/css/reset.css" rel="stylesheet">
     <link href="./static/css/base.css" rel="stylesheet">
+    <style id="inline-styles" media="screen">
+      /* Inline SVG to avoid an extra request. */
+      .bg-image {
+        background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%0A%20%20%20%20%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%0A%20%20%20%20%20width%3D%221200%22%20height%3D%22675%22%0A%20%20%20%20%20viewBox%3D%220%200%201200%20675%22%3E%0A%09%3Cfilter%20id%3D%22blur%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%09%09%3CfeGaussianBlur%20stdDeviation%3D%2220%2020%22%20edgeMode%3D%22duplicate%22%20/%3E%0A%09%09%3CfeComponentTransfer%3E%0A%09%09%09%3CfeFuncA%20type%3D%22discrete%22%20tableValues%3D%221%201%22%20/%3E%0A%09%09%3C/feComponentTransfer%3E%0A%09%3C/filter%3E%0A%09%3Cimage%20filter%3D%22url%28%23blur%29%22%0A%09%09xlink%3Ahref%3D%22data%3Aimage/jpeg%3Bbase64%2C/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAXACgDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAYHBQMI/8QAKxAAAgEDAwEHBAMAAAAAAAAAAQIDBAURAAYhEgcTFDEyUZEiI0GxQnGB/8QAFwEBAQEBAAAAAAAAAAAAAAAABgMFBP/EACcRAAEBBwMEAwEAAAAAAAAAAAECAAMREiExYQQFBhMWQXGBoeHR/9oADAMBAAIRAxEAPwCr2/Y9l2zY5LjVqqU8Kgs3ST5kAfJI0/UG0rVJRR1CBDE6CRWxjKkZB+NQPZ26L1vzaUcNdXRGKvpknlgp+krG2UbCHGekNxkkn96abte7xcIZoe/rqWnEEaGGhkTpUKOPUGIJ4zg48uNNn/KAt8qJVD7jWPm1mGOuJJdOkygAx+IUh4vdrGmzbdJEGCJ0kZB99ZF62pZ6UU6zqimpnSniGPU7Hgfv41NbfvjcdopnQCSeNTGoaqVmI4xngKBxjgDHGcZJJwbhu6/zUlHfZRUVxo6tJYrck/0tIsiohwf5EAcFsZZjjPOodyoCQUFUxpAhrdsqUopXCUfbPm7Oxa3Twu3QiH3Hno15s3Z25do601XVVJvLqzy5e209P4WBRGJAmWDMSOQST/uDnRpK65P0hJOo+h+sbecTdLMxQkfP4z3ua4bfvW2K2Lb9rihu1S6P3rlwFAcM5GchcgY4HsPIcPtYNtXi3zM0c9FcZoYlMlM7IqMg/CjgZOcnGTnRo0p1HHdvS9UZLgUpDzi9S2Xot+1z50kKVY5xnAZistTsy1wYe2pXTFVDS1UfeHgAcZHAzk++T/WMK8Ve3bfd7VdLatTC9NcKaSWEH7ZjBRSAvTj1KrH88tjzxo0a4FbDoFoKCigtj02od11btXUC6m+W4bo3X2eVFRcpHt9XC9eG8RHT1M8UbluGPQrBQSPpOByCRo0aNJXPH9FLNAxOWEPd/wBaFlMRAe/63//Z%22%0A%09%09x%3D%220%22%20y%3D%220%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%20width%3D%22100%25%22/%3E%0A%3C/svg%3E);
+      }
+      .bg-image-enhanced {
+        background-image:
+          url(./static/images/backgrounds/HeritageProgressive.jpg);
+      }
+      @media (max-width: 50rem) {
+        .bg-image,
+        .bg-image-enhanced {
+          background-image: none;
+        }
+      }
+    </style>
   </head>
-  <body id="bg-image" class="bg-image-heritage">
+  <body class="bg-image">
     <!-- Navigation -->
     <div id="nav-bar">
       <div class="page-wrapper">
