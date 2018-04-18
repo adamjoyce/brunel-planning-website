@@ -57,7 +57,6 @@ window.onload = function() {
     // Given id to be consistent across browsers.
     var styles = doc.getElementById('inline-styles').sheet.cssRules;
     // Fetch the background-image declaration...
-    console.log(styles);
     var bgDecl = (function () {
       // ...via a self-executing function, where a loop is run
       var bgStyle, i, l = styles.length;

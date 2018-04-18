@@ -248,6 +248,49 @@ footer .nav-mobile a {
 }
 /* End of About Us Page */
 
+/* Support Queries */
+@supports (-webkit-overflow-scrolling: touch) {
+  @media (min-width: 50rem) {
+    /* iOS Banner Images */
+    .image-banner-home {
+      background-image: url(../images/banners/HomeProgressive.jpg);
+      background-position: center 50%;
+    }
+
+    .image-banner-commercial {
+      background-image: url(../images/banners/CommercialProgressive.jpg);
+      background-position: center 91%;
+    }
+
+    .image-banner-residential {
+      background-image: url(../images/banners/ResidentialProgressive.jpg);
+      background-position: center 55%;
+    }
+
+    .image-banner-transport {
+      background-image: url(../images/banners/TransportProgressive.jpg);
+      background-position: center 63%;
+    }
+
+    .image-banner-education {
+      background-image: url(../images/banners/EducationProgressive.jpg);
+      background-position: center 85%;
+    }
+
+    .image-banner-heritage {
+      background-image: url(../images/banners/HeritageProgressive.jpg);
+      background-position: center 35%;
+    }
+
+    .image-banner-energy {
+      background-image: url(../images/banners/EnergyProgressive.jpg);
+      background-position: center 75%;
+    }
+    /* End of iOS Banner Images */
+  }
+}
+/* End of Support Queries */
+
 
 /* Media Queries */
 @media (max-width: 50rem) {
@@ -290,109 +333,80 @@ footer .nav-mobile a {
 }
 
 @media (min-width: 50rem) {
-  body {
-    overflow: hidden;
-  }
+  @supports not (-webkit-overflow-scrolling: touch) {
+    body {
+      background-color: #aaa;
+      overflow: hidden;
+    }
 
-  footer {
-    display: none;
-  }
+    footer {
+      display: none;
+    }
 
-  .underline {
-    border-bottom-color: #02136d;
-  }
+    .underline {
+      border-bottom-color: #02136d;
+    }
 
-  .hamburger {
-    display: none;
-  }
+    .hamburger {
+      display: none;
+    }
 
-  .nav-mobile {
-    display: none;
-  }
+    .nav-mobile {
+      display: none;
+    }
 
-  /* Background Images */
-  /* .bg-image-home {
-    background-image: url(../images/backgrounds/HomeProgressive.jpg);
-  }
+    .logo {
+      color: #02136d;
+      display: block;
+      float: right;
+      font-size: 2.5rem;
+      height: 6rem;
+      line-height: 6rem;
+      margin: 3rem 0;
+      width: auto;
+    }
 
-  .bg-image-commercial {
-    background-image: url(../images/backgrounds/CommercialProgressive.jpg);
-  }
+    .text-box {
+      background: linear-gradient(to bottom right, #fff, #aaa);
+      border: 5px solid #02136d;
+      float: right;
+      margin: 0;
+      width: 35rem;
+    }
 
-  .bg-image-residential {
-    background-image: url(../images/backgrounds/ResidentialProgressive.jpg);
-  }
+    .text-box h1 {
+      text-align: left;
+    }
 
-  .bg-image-transport {
-    background-image: url(../images/backgrounds/TransportProgressive.jpg);
-  }
+    .bg-image {
+      background-attachment: fixed;
+    	background-position: center;
+      background-repeat: no-repeat;
+    	background-size: cover;
+    }
+    /* End of Background Images */
 
-  .bg-image-education {
-    background-image: url(../images/backgrounds/EducationProgressive.jpg);
-  }
+    #nav-regular {
+      display: block;
+    }
 
-  .bg-image-heritage {
-    background-image: url(../images/backgrounds/HeritageProgressive.jpg);
-  }
+    #nav-regular a:hover {
+      border-bottom: 3px solid #fff;
+    }
 
-  .bg-image-energy {
-    background-image: url(../images/backgrounds/EnergyProgressive.jpg);
-  } */
-  /* End of Background Images */
+    /* BP Nav Logo */
+    #nav-logo img:first-of-type {
+      display: inline-block;
+    }
 
-  .logo {
-    color: #02136d;
-    display: block;
-    float: right;
-    font-size: 2.5rem;
-    height: 6rem;
-    line-height: 6rem;
-    margin: 3rem 0;
-    width: auto;
-  }
+    /* BrunelPlanning Nav Logo */
+    #nav-logo img:last-of-type {
+      display: none;
+    }
 
-  .text-box {
-    background: linear-gradient(to bottom right, #fff, #aaa);
-    border: 5px solid #02136d;
-    float: right;
-    margin: 0;
-    width: 35rem;
-  }
-
-  .text-box h1 {
-    text-align: left;
-  }
-
-  .bg-image {
-    background-attachment: fixed;
-    background-color: #f9f9f9;
-    /* background-image: none; */
-  	background-position: center;
-    background-repeat: no-repeat;
-  	background-size: cover;
-  }
-  /* End of Background Images */
-
-  #nav-regular {
-    display: block;
-  }
-
-  #nav-regular a:hover {
-    border-bottom: 3px solid #fff;
-  }
-
-  /* BP Nav Logo */
-  #nav-logo img:first-of-type {
-    display: inline-block;
-  }
-
-  /* BrunelPlanning Nav Logo */
-  #nav-logo img:last-of-type {
-    display: none;
-  }
-
-  #image-banner {
-    display: none;
+    #image-banner {
+      display: none;
+    }
   }
 }
 
