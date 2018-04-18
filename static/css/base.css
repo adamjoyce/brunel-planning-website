@@ -429,3 +429,83 @@ footer .nav-mobile a {
 }
 /* End CSS Grid Support */
 /* End of Media Queries */
+
+
+/* Browser Specific */
+@media all and (min-width: 50rem) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  body {
+   background-color: #aaa;
+   overflow: hidden;
+  }
+
+  footer {
+   display: none;
+  }
+
+  .underline {
+   border-bottom-color: #02136d;
+  }
+
+  .hamburger {
+   display: none;
+  }
+
+  .nav-mobile {
+   display: none;
+  }
+
+  .logo {
+   color: #02136d;
+   display: block;
+   float: right;
+   font-size: 2.5rem;
+   height: 6rem;
+   line-height: 6rem;
+   margin: 3rem 0;
+   width: auto;
+  }
+
+  .text-box {
+   background: linear-gradient(to bottom right, #fff, #aaa);
+   border: 5px solid #02136d;
+   float: right;
+   margin: 0;
+   width: 35rem;
+  }
+
+  .text-box h1 {
+   text-align: left;
+  }
+
+  .bg-image {
+   background-attachment: fixed;
+  	background-position: center;
+   background-repeat: no-repeat;
+  	background-size: cover;
+  }
+  /* End of Background Images */
+
+  #nav-regular {
+   display: block;
+  }
+
+  #nav-regular a:hover {
+   border-bottom: 3px solid #fff;
+  }
+
+  /* BP Nav Logo */
+  #nav-logo img:first-of-type {
+   display: inline-block;
+  }
+
+  /* BrunelPlanning Nav Logo */
+  #nav-logo img:last-of-type {
+   display: none;
+  }
+
+  #image-banner {
+   display: none;
+  }
+}
+/* End of Browser Specific */
