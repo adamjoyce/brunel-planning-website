@@ -1,12 +1,8 @@
+
 body {
-  background: url(../images/backgrounds/BristolBridge12Progressive.jpg);
-  background-attachment: fixed;
-	background-position: center;
-  background-repeat: no-repeat;
-	background-size: cover;
   color: #fff;
   font-family: Georgia, Utopia, Charter, serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -14,13 +10,66 @@ a {
   text-decoration: none;
 }
 
-.content-wrapper {
+footer {
+  background: #02136d;
+  box-shadow: 0 50vh 0 50vh #02136d;
+}
+
+footer .nav-mobile {
+  font-size: 0.85rem;
+  max-height: none;
+}
+
+footer .nav-mobile a {
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+
+.page-wrapper {
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+.underline {
+  display: inline-block;
+  border-bottom: 2px solid #02136d;
+  margin-bottom: 1rem;
+}
+
+.alt-text img {
+  font-family: Georgia, Utopia, Charter, serif;
+  text-transform: none;
+}
+
 
 /* Navigation */
+.hamburger {
+  float: right;
+  height: 100%;
+  font-size: 1.8rem;
+  margin: 0.46rem 0;
+}
+
+.nav-mobile {
+  max-height: 0;
+  overflow-y: hidden;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.nav-mobile li:first-of-type {
+  margin-top: 0.8rem;
+}
+
+.nav-mobile li:last-of-type {
+  margin-bottom: 0.8rem;
+}
+
+.nav-mobile.opened {
+  max-height: 24rem;
+}
+
 #nav-bar {
   background: #02136d;
   font-family: Verdana, sans-serif;
@@ -29,8 +78,11 @@ a {
 }
 
 #nav-bar li a {
+  border: 3px solid #02136d;
+  border-left: 0;
+  border-right: 0;
   display: inline-block;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 }
 
 #nav-bar::after {
@@ -39,7 +91,34 @@ a {
   display: table;
 }
 
+#nav-logo {
+  margin-right: 1rem;
+}
+
+#nav-logo img {
+  font-size: 2rem;
+  height: 2.73333125rem;
+  line-height: 2.73333125rem;
+  vertical-align: top;
+  width: auto;
+}
+
+/* BP Nav Logo */
+#nav-logo img:first-of-type {
+  display: none;
+}
+
+/* BrunelPlanning Nav Logo */
+#nav-logo img:last-of-type {
+  display: inline-block;
+  font-size: 1.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  margin-top: 0.13333125rem;
+}
+
 #nav-regular {
+  display: none;
   float: right;
 }
 
@@ -52,25 +131,30 @@ a {
   margin-right: 0;
 }
 
-#nav-logo {
-  margin-right: 1rem;
-}
-
-#nav-logo img {
-  height: 2.6rem;
-  padding-top: 0.1rem;
-  vertical-align: top;
-  width: auto;
+#nav-regular #active {
+  border-bottom: 3px solid #fff;
 }
 /* End of Navigation */
 
+/* Desktop Banner Images */
+.image-banner-about {
+  background-image: url(../images/banners/AboutProgressive.jpg);
+  background-position: center 91%;
+}
 
-/* Main Sliding Content */
+#image-banner {
+  background-size: cover;
+  min-height: 12.5rem;
+}
+/* End of Desktop Banner Images */
+
+
+/* Main Content */
 .content-wrapper {
   clear: both;
   content: "";
   display: table;
-  /* transition-duration: 600ms; */
+  width: 100%;
 }
 
 .content-wrapper.duration-left {
@@ -78,64 +162,351 @@ a {
 }
 
 .content-wrapper.duration-right {
-  transition-duration: 1200ms;
+  transition-duration: 900ms;
 }
 
 .content-wrapper.loading-left {
   -webkit-transform: translate(-100%);
-      -ms-transform: rotate(-100%);
-          transform: rotate(-100%);
+      -ms-transform: translate(-100%);
+          transform: translate(-100%);
 }
 
 .content-wrapper.loading-right {
   -webkit-transform: translate(100%);
-      -ms-transform: rotate(100%);
-          transform: rotate(100%);
+      -ms-transform: translate(100%);
+          transform: translate(100%);
 }
 
-#logo-wrapper {
-  /* background: blue; */
-  display: block;
+.js-hidden {
+  display: none;
+}
+
+.text {
+  color: #02136d;
+  line-height: 1.5rem;
+}
+
+.text h1,
+.text h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.text h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.text p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.logo {
+  display: none;
+}
+
+.text-box {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.text-box p:first-of-type {
+  margin-top: 0;
+}
+
+.contact-details p {
+  margin-bottom: 0;
+}
+/* End of Main Content */
+
+
+/* About Us Page */
+.bg-dark {
+  background: #f9f9f9;
+}
+
+.profile-wrapper {
+  padding: 3rem 0;
+}
+
+.profile-image {
+  border: 3px solid #02136d;
   height: auto;
-  margin: auto;
+  margin-bottom: 1.5rem;
+  max-width: 30rem;
   width: 100%;
 }
 
-#logo-wrapper img {
-  float: right;
-  height: 6rem;
-  margin: 4rem 0;
-  vertical-align: top;
+.heading-about {
+  margin-top: 2rem;
 }
 
-#logo-wrapper::after {
-  clear: both;
-  content: "";
-  display: table;
+.heading-about h1 {
+  margin: 0;
 }
+/* End of About Us Page */
 
-#text-wrapper {
-  /* background: green; */
-  display: block;
-  height: 20rem;
-  margin: auto;
-  width: 100%;
-}
+/* Support Queries */
+@supports (-webkit-overflow-scrolling: touch) {
+  @media (min-width: 50rem) {
+    /* iOS Banner Images */
+    .image-banner-home {
+      background-image: url(../images/banners/HomeProgressive.jpg);
+      background-position: center 50%;
+    }
 
-#text-wrapper div {
-  background: #02136d;
-  float: right;
-  height: 100%;
-  width: 40rem;
+    .image-banner-commercial {
+      background-image: url(../images/banners/CommercialProgressive.jpg);
+      background-position: center 91%;
+    }
+
+    .image-banner-residential {
+      background-image: url(../images/banners/ResidentialProgressive.jpg);
+      background-position: center 55%;
+    }
+
+    .image-banner-transport {
+      background-image: url(../images/banners/TransportProgressive.jpg);
+      background-position: center 63%;
+    }
+
+    .image-banner-education {
+      background-image: url(../images/banners/EducationProgressive.jpg);
+      background-position: center 85%;
+    }
+
+    .image-banner-heritage {
+      background-image: url(../images/banners/HeritageProgressive.jpg);
+      background-position: center 35%;
+    }
+
+    .image-banner-energy {
+      background-image: url(../images/banners/EnergyProgressive.jpg);
+      background-position: center 75%;
+    }
+    /* End of iOS Banner Images */
+  }
 }
-/* End of Main Sliding Content */
+/* End of Support Queries */
 
 
 /* Media Queries */
+@media (max-width: 50rem) {
+  /* Mobile Banner Images */
+  .image-banner-home {
+    background-image: url(../images/banners/HomeProgressive.jpg);
+    background-position: center 50%;
+  }
+
+  .image-banner-commercial {
+    background-image: url(../images/banners/CommercialProgressive.jpg);
+    background-position: center 91%;
+  }
+
+  .image-banner-residential {
+    background-image: url(../images/banners/ResidentialProgressive.jpg);
+    background-position: center 55%;
+  }
+
+  .image-banner-transport {
+    background-image: url(../images/banners/TransportProgressive.jpg);
+    background-position: center 63%;
+  }
+
+  .image-banner-education {
+    background-image: url(../images/banners/EducationProgressive.jpg);
+    background-position: center 85%;
+  }
+
+  .image-banner-heritage {
+    background-image: url(../images/banners/HeritageProgressive.jpg);
+    background-position: center 35%;
+  }
+
+  .image-banner-energy {
+    background-image: url(../images/banners/EnergyProgressive.jpg);
+    background-position: center 75%;
+  }
+  /* End of Mobile Banner Images */
+}
+
+@media (min-width: 50rem) {
+  @supports not (-webkit-overflow-scrolling: touch) {
+    body {
+      background-color: #aaa;
+      overflow: hidden;
+    }
+
+    footer {
+      display: none;
+    }
+
+    .underline {
+      border-bottom-color: #02136d;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .nav-mobile {
+      display: none;
+    }
+
+    .logo {
+      color: #02136d;
+      display: block;
+      float: right;
+      font-size: 2.5rem;
+      height: 6rem;
+      line-height: 6rem;
+      margin: 3rem 0;
+      width: auto;
+    }
+
+    .text-box {
+      background: linear-gradient(to bottom right, #fff, #aaa);
+      border: 5px solid #02136d;
+      float: right;
+      margin: 0;
+      width: 35rem;
+    }
+
+    .text-box h1 {
+      text-align: left;
+    }
+
+    .bg-image {
+      background-attachment: fixed;
+    	background-position: center;
+      background-repeat: no-repeat;
+    	background-size: cover;
+    }
+    /* End of Background Images */
+
+    #nav-regular {
+      display: block;
+    }
+
+    #nav-regular a:hover {
+      border-bottom: 3px solid #fff;
+    }
+
+    /* BP Nav Logo */
+    #nav-logo img:first-of-type {
+      display: inline-block;
+    }
+
+    /* BrunelPlanning Nav Logo */
+    #nav-logo img:last-of-type {
+      display: none;
+    }
+
+    #image-banner {
+      display: none;
+    }
+  }
+}
+
 @media (min-width: 70rem) {
-  .content-wrapper {
+  .page-wrapper {
     padding: 0;
     width: 70rem;
   }
 }
+
+/* CSS Grid Support */
+@supports (display: grid) {
+  @media (min-width: 50rem) {
+    .profile-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-gap: 2.5rem;
+    }
+  }
+}
+/* End CSS Grid Support */
 /* End of Media Queries */
+
+
+/* Browser Specific */
+@media all and (min-width: 50rem) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  body {
+   background-color: #aaa;
+   overflow: hidden;
+  }
+
+  footer {
+   display: none;
+  }
+
+  .underline {
+   border-bottom-color: #02136d;
+  }
+
+  .hamburger {
+   display: none;
+  }
+
+  .nav-mobile {
+   display: none;
+  }
+
+  .logo {
+   color: #02136d;
+   display: block;
+   float: right;
+   font-size: 2.5rem;
+   height: 6rem;
+   line-height: 6rem;
+   margin: 3rem 0;
+   width: auto;
+  }
+
+  .text-box {
+   background: linear-gradient(to bottom right, #fff, #aaa);
+   border: 5px solid #02136d;
+   float: right;
+   margin: 0;
+   width: 35rem;
+  }
+
+  .text-box h1 {
+   text-align: left;
+  }
+
+  .bg-image {
+   background-attachment: fixed;
+  	background-position: center;
+   background-repeat: no-repeat;
+  	background-size: cover;
+  }
+  /* End of Background Images */
+
+  #nav-regular {
+   display: block;
+  }
+
+  #nav-regular a:hover {
+   border-bottom: 3px solid #fff;
+  }
+
+  /* BP Nav Logo */
+  #nav-logo img:first-of-type {
+   display: inline-block;
+  }
+
+  /* BrunelPlanning Nav Logo */
+  #nav-logo img:last-of-type {
+   display: none;
+  }
+
+  #image-banner {
+   display: none;
+  }
+}
+/* End of Browser Specific */
