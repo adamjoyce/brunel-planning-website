@@ -251,7 +251,7 @@ footer .nav-mobile a {
 
 /* Support Queries */
 @supports (-webkit-overflow-scrolling: touch) {
-  @media (min-width: 50rem) {
+  @media (min-width: 56rem) {
     /* iOS Banner Images */
     .image-banner-home {
       background-image: url(../images/banners/HomeProgressive.jpg);
@@ -294,7 +294,7 @@ footer .nav-mobile a {
 
 
 /* Media Queries */
-@media (max-width: 50rem) {
+@media (max-width: 56rem) {
   /* Mobile Banner Images */
   .image-banner-home {
     background-image: url(../images/banners/HomeProgressive.jpg);
@@ -316,6 +316,11 @@ footer .nav-mobile a {
     background-position: center 63%;
   }
 
+  .image-banner-logistics {
+    background-image: url(../images/banners/LogisticsProgressive.jpg);
+    background-position: center 63%;
+  }
+
   .image-banner-education {
     background-image: url(../images/banners/EducationProgressive.jpg);
     background-position: center 85%;
@@ -333,7 +338,7 @@ footer .nav-mobile a {
   /* End of Mobile Banner Images */
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 56rem) {
   @supports not (-webkit-overflow-scrolling: touch) {
     body {
       background-color: #aaa;
@@ -433,7 +438,7 @@ footer .nav-mobile a {
 
 
 /* Browser Specific */
-@media all and (min-width: 50rem) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (min-width: 56rem) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* IE10+ CSS styles go here */
   body {
    background-color: #aaa;
@@ -480,10 +485,10 @@ footer .nav-mobile a {
   }
 
   .bg-image {
-   background-attachment: fixed;
-  	background-position: center;
-   background-repeat: no-repeat;
-  	background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   /* End of Background Images */
 
